@@ -1,22 +1,34 @@
-# 🚀 Project: Simple NASA API
+# 🚀 NASA API - Picture of the Day 
+A JavaScript application that uses NASA's Astronomy Picture of the Day API to retrieve and display a picture on user-selected date.
+<img width="1752" height="1017" alt="Screenshot 2026-11-19 at 12 32 58 AM" src="https://github.com/user-attachments/assets/aedf1f3b-787f-4561-91b9-88a99ee53c76" />
 
-### Goal: Enable your user to enter a date and return the picture/video of the day from NASA's API
+## Features
+- Search NASA's Astronomy Picture of the Day by date
+- Display the image, title, and explanation
+- Support image and video responses
+- Use a galaxy background for a space-inspired interface
 
-### How to submit your code for review:
+## Tech Stack 
+- HTML
+- CSS
+- JavaScript 
+- Fetch API
+- NASA APOD API
 
-- Fork and clone this repo
-- Create a new branch called answer
-- Checkout answer branch
-- Push to your fork
-- Issue a pull request
-- Your pull request description should contain the following:
-  - (1 to 5 no 3) I completed the challenge
-  - (1 to 5 no 3) I feel good about my code
-  - Anything specific on which you want feedback!
+## How It Works
+1. The user selects a date.
+2. JavaScript captures the input using querySelector().
+3. The Fetch API sends a request to NASA's APOD endpoint.
+4. The response is processed using JavaScript Promises (.then() and .catch()).
+5. DOM manipulation dynamically displays the returned title, image or video, and explanation.
 
-Example:
+## Getting Started
+1. Clone the repository:
 ```
-I completed the challenge: 5
-I feel good about my code: 4
-I'm not sure if my constructors are setup cleanly...
+git clone https://github.com/CarlyJovon/nasa-api.git
 ```
+2. Navigate into the project:
+```
+cd nasa-api
+```
+3. Open `index.html` in your browser.
