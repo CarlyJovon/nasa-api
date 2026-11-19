@@ -13,20 +13,22 @@ function getNasa(){
     console.log(variable)
 
     fetch(
-        `https://api.nasa.gov/planetary/apod?api_key=cmRT0wdkErUvSN59j8HcmguhBkzb8CfddoVDMw0h&date=${variable}`
+        `https://science.nasa.gov/wp-json/wp/v2/apod-basic/250621`
     )
     .then((res) => res.json())
     .then((data) => { 
         console.log(data);
+        console.log(data.url);
+        console.log(data.title);
+        console.log(data.media_type);
 
 
         document.querySelector('h2').innerText = data.title; 
-        document.querySelector('img').src = data.hdurl; 
         document.querySelector('h3').innerHTML = data.explanation;
 
         //create virtual DOM
         if (data.media_type === "image") { 
-            document.querySelector("img").src = data.hdurl; 
+            document.querySelector("img").src = data.hdurl || data.url; 
             document.querySelector("img").style.display = "block";
             document.querySelector("video").style.display = "none"; 
         }else if (data.media_type === "video") {
